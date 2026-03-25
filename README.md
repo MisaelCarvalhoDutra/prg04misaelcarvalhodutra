@@ -1,11 +1,10 @@
 <div align="center">
-  <img src="infrastructure/assets/images/logo.png" width="250">
-  <h1>  🎬 SeatFlix | Sistema de Cinema </h1>
+  <img src="infrastructure/assets/images/logopizza.png" width="250">
+  <h1>🍕 Pizzly | Sistema de Pizzaria com Delivery </h1>
 
 </div>
 
-
-O SeatFlix é uma aplicação web que simula um sistema de cinema, permitindo que usuários visualizem filmes em cartaz e acessem informações sobre os conteúdos exibidos.
+O Pizzly é uma aplicação web que simula um sistema de pizzaria com delivery, permitindo que usuários escolham pizzas, montem pedidos e acompanhem o status da entrega.
 
 Este projeto está sendo desenvolvido para a disciplina de Programação Web, com o objetivo de construir uma aplicação completa ao longo do semestre.
 
@@ -29,17 +28,25 @@ Este projeto está sendo desenvolvido para a disciplina de Programação Web, co
 
 **index.html** -> Página inicial do projeto.
 
-## 🎬 Funcionalidades
+
+
+## 🍕 Funcionalidades
 
 O sistema permitirá que o usuário:
 
-- Visualize filmes em cartaz
-- Acesse detalhes de cada filme
-- Navegue entre diferentes conteúdos
+- Visualizar pizzas disponíveis
+- Escolher tamanho (P, M, G)
+- Adicionar pizzas ao pedido
+- Remover itens do pedido
+- Visualizar o pedido atual
+- Acompanhar o status do pedido (preparo, forno, entrega)
+
+---
 
 ### 🔮 Funcionalidades futuras
 
 - Cadastro e login de usuários
-- Sistema de favoritos
-- Avaliação de filmes
-- Possível implementação de sessões e escolha de assentos
+- Armazenamento de pedidos
+- Informar endereço para entrega
+- Histórico de pedidos
+
