@@ -73,7 +73,7 @@ hr {
 .cor {
     width: 150px;
     height: 100px;
-    display: inline-block;
+    display: inline-block; /*os quadrados ficarem  lado a lado*/
     margin: 10px;
     color: white;
     font-weight: bold;
@@ -99,4 +99,39 @@ hr {
 .amarelo {
     background-color: #fcbf49;
     color: black; /* melhor contraste */
+}
+
+/* aqui os Inputs, selects e textarea */
+input, select, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.select-menor{
+    width: 200px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Botão */
+button {
+    background-color: #b22222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8b1a1a;
+    transform: scale(1.05);
 }

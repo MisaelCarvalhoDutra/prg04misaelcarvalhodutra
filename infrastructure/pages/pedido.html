@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+
+    <header>
+        <h1>🍕 Pizzly - Fazer Pedido</h1>
+    </header>
+
+    <main>
+        <section>
+
+            <h2>📋 Dados do Pedido</h2>
+            <form>
+
+                <label>Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <br><br>
+
+                <label>Sabor:</label>
+                <select name="pizza" class="select-menor" required>
+                    <option disabled selected>Selecione o sabor</option>
+                    <option>Calabresa</option>
+                    <option>Frango com Catupiry</option>
+                    <option>Quatro Queijos</option>
+                    <option>Portuguesa</option>
+                </select>
+
+                <br><br>
+
+                <label>Tamanho:</label>
+
+                <select name="tamanho" class="select-menor" required>
+                    <option disabled selected>Selecione o tamanho</option>
+                    <option>P</option>
+                    <option>M</option>
+                    <option>G</option>
+                </select>
+
+                <br><br>
+
+                <label>Observações:</label><br>
+                <textarea name="obs" placeholder="Ex: sem cebola, borda recheada..." rows="4"></textarea><!--sem required, não pode ser obrigatória e placeholder com exemplo de observação-->
+
+                <br><br>
+                
+
+                <button type="submit">Fazer Pedido</button>
+
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Pizzly</p>
+        <a href="index.html" class="btn">Voltar</a>
+    </footer>
+
+</div>
+    
+</body>
+</html>
