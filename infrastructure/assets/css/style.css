@@ -14,6 +14,7 @@ body{
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 90%;
 }
 
 h1 {
@@ -135,3 +136,58 @@ button:hover {
     background-color: #8b1a1a;
     transform: scale(1.05);
 }
+
+nav#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav#menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav#menu a {
+    display: inline-block; 
+    text-decoration: none;
+    background-color: #b22222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav#menu a:hover {
+    background-color: #8b1a1a;
+    transform: scale(1.05);
+}
+
+audio { 
+    width: 100%; /* vai ocupar todo o container */
+    max-width: 600px; /*para não ficar gigante */
+}
+
+/*quando a largura for até 600px (no caso de celulares, telas pequenas) aplicando Responsividade*/ 
+@media (max-width: 600px) { 
+    #menu li { /*ou seja, cada item da lista*/
+        display: block; /*muda de horizontal (que é o inline-block) para vertical*/
+        margin: 10px 0;
+    }
+}
+
+.video-container {
+    position: relative; /*faz referencia para o frame*/
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden; /*pro video n "vazar"* do conteiner*/
+    min-height: 200px; /*para o botão do youtube ficar visivel mesmo em telas pequenas*/
+}
+
+.video-container iframe {
+    position: absolute; /* agora é o posicionamento em relação ao conteiner*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
