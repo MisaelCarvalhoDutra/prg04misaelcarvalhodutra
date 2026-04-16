@@ -3,8 +3,23 @@ body{
     background-color: #fff3e6;
     color: #333;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
 }
+
+header h1 {
+    font-size: 22px;
+}
+
+nav#menu ul {
+    display: flex;
+    flex-direction: column; /* agora os botões ficam em coluna */
+    gap: 10px;              /* espaço entre os botões */
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Container principal da página (centraliza o conteúdo e cria um layout organizado) */
 .container {
@@ -170,13 +185,6 @@ audio {
     max-width: 600px; /*para não ficar gigante */
 }
 
-/* Responsividade para telas muito pequenas */
-@media (max-width: 400px) {
-    nav#menu a {
-        width: 100%; /* botão ocupa toda a linha */
-        box-sizing: border-box; /* garante que o padding não ultrapasse a largura */
-    }
-}
 
 .video-container {
     position: relative; /*faz referencia para o frame*/
@@ -276,38 +284,39 @@ audio {
 .login-container {
     display: flex;
     min-height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: flex-start;
     
 }
 
 .login-left {
-    flex: 1;
-    background-color: #b22222;
-    color: white;
+    background: none;
+    color: #b22222;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    padding: 80px 60px;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
     border-radius: 0 30px 30px 0;
+    
 }
 
 .login-left h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
-    color: white;
+    color: #b22222;
 }
 
 .login-left p {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 10px;
-    color: rgba(255,255,255,0.8);
+    color: #555
 }
 
 
 .login-right {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,12 +325,13 @@ audio {
 
 .login-card {
     background-color: white;
-    padding: 40px 35px;
+    padding: 25px 20px;
     border-radius: 16px;
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 340px;
     transition: 0.3s;
+    align-items: center;
 }
 
 
@@ -353,6 +363,14 @@ audio {
     color: #aaa;
 }
 
+input:focus:invalid {
+    border: 2px solid rgb(255, 22, 22);
+}
+
+input:focus:valid {
+    border: 2px solid rgb(0, 255, 0);
+}
+
 
 
 /* botão ocupando largura total */
@@ -376,44 +394,130 @@ audio {
     transition: 0.3s;
 }
 
-/* responsividade */
-@media (max-width: 768px) {
+
+
+/* TABLET 601px a 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+    nav#menu ul {
+        flex-direction: row; /* volta pra linha */
+        justify-content: center;
+        gap: 12px;
+    }
+
+    main {
+        width: 92%;
+        margin: 2rem auto;
+        gap: 1.5rem;
+    }
+    footer p {
+        font-size: 0.95rem;
+    }
+
     .login-container {
         flex-direction: column;
-        align-items: center; /* centraliza os itens na vertical */
+        align-items: center;
+        justify-content: center;
         min-height: auto;
     }
 
     .login-left {
-        background: none;
+        background: none; /* remove o fundo vermelho */
         color: #b22222;
         padding: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         text-align: center;
         align-items: center;
     }
 
+    /* Só ajusta tamanhos */
     .login-left h1 {
         color: #b22222;
+        font-size: 40px;
     }
 
     .login-left p {
         color: #555;
+        font-size: 17px;
     }
 
-    
-
     .login-right {
-        width: 90%;
-        max-width: 400px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
+        width: 95%; /* um pouco maior que mobile */
+        max-width: 420px;
     }
 
     .login-card {
-        max-width: 350px;
+        max-width: 380px;
+        width: 100%;
     }
-    
 }
 
+
+/* DESKTOP acima de 1025px */
+@media (min-width: 1025px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+    nav#menu ul {
+        gap: 20px;
+        flex-direction: row; /* continua em linha */
+        justify-content: center;
+    }
+
+    main {
+        width: 80%;
+        margin: 3rem auto;
+        gap: 2rem;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+
+    .login-container {
+        flex-direction: row; /* lado a lado */
+        align-items: center; /* alinhamento normal */
+        min-height: 100vh; /* ocupa toda altura da tela */
+        gap: 40px;
+    }
+
+    .login-left {
+        width: 50%;
+        min-height: 100vh;
+        background-color: #b22222; /* mantém o fundo vermelho */
+        color: white;
+        padding: 60px 50px; /* espaçamento interno maior */
+        border-radius: 0 30px 30px 0;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .login-left h1 {
+        font-size: 48px; /* tamanho original */
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .login-left p {
+        font-size: 16px; /* tamanho original do parágrafo */
+        color: rgba(255,255,255,0.8);
+        margin-bottom: 10px;
+    }
+
+    .login-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .login-card {
+        max-width: 400px; /* volta ao tamanho original */
+        width: 100%;
+    }
+}
