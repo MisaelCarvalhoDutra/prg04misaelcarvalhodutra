@@ -22,15 +22,7 @@ nav#menu ul {
 
 
 /* Container principal da página (centraliza o conteúdo e cria um layout organizado) */
-.container {
-    max-width: 800px; /* limita a largura para não esticar demais */
-    margin: 0 auto; /*centraliza horizontal*/
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    width: 90%;
-}
+
 
 h1 {
     color: #b22222;
@@ -468,11 +460,6 @@ input:focus:valid {
         justify-content: center;
     }
 
-    main {
-        width: 80%;
-        margin: 3rem auto;
-        gap: 2rem;
-    }
     footer p {
         font-size: 1rem;
     }
@@ -520,4 +507,26 @@ input:focus:valid {
         max-width: 400px; /* volta ao tamanho original */
         width: 100%;
     }
+}
+
+/* Animação de hover nos cards */
+.card {
+    transition: 0.3s ease;
+    border-radius: 12px; /* mantém cantos arredondados */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* sobe o card */
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.2); 
+}
+
+
+.btn-danger {
+    transition: 0.3s ease; /* suaviza a animação */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+}
+
+.btn-danger:hover {
+    transform: scale(1.05); /* aumenta levemente */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
